@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="form-left">
+      <div class="form-header">
+        <h1 class="form-header__title">Let’s Make Payment</h1>
+        <p class="form-header__description">To start your subscription,
+          input your card details to make payment. <br>
+          You will be redirected to your bank's authorization page.
+        </p>
+      </div>
+      <form id="form-Credit-Data">
+        <div class="form-field">
+          <div class="form-field__container">
+            <label class="form-label" for="Name">Cardholder's Name</label>
+            <input class="form-input" type="text" id="Name" name="Cardholders-Name" placeholder="PAULINA CHIMAROKE" autocomplete="off">
+            <span class="error" id="name-error"></span>
+          </div>
+        </div>
+        <div class="form-field">
+          <div class="form-field__container">
+            <label class="form-label" for="Card-Number">Card Number</label>
+            <input class="form-input form-input__card card-number-input" type="text" name="Card-Number" id="Card-Number" placeholder="9870 3456 7890 6473">
+            <img id="card-type-img" alt="" style="position: absolute; bottom: 59px; left: 7px; display: none;">
+          </div>
+        </div>
+        <div class="form-field__expiry-cvc">
+          <div class="form-field__expiry">
+            <div class="form-field__container">
+              <label class="form-label" for="Expiry">Expiry</label>
+              <input class="form-input form-input__expiry" type="text" name="Expiry" id="Expiry" placeholder="03 / 25">
+              <span class="error" id="Expiry-error"></span>
+            </div>
+          </div>
+          <div class="form-field__cvc">
+            <div class="form-field__container">
+              <label class="form-label" for="CVC">CVC</label>
+              <input class="form-input form-input__cvc" type="text" name="CVC" id="CVC" placeholder="654">
+              <span class="error" id="cvc-error"></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-field">
+          <div class="form-field__container">
+            <label class="form-label" for="Discount-Code">Discount Code</label>
+            <input class="form-input" type="text" name="Discount-Code" id="Discount-Code" placeholder="CHIKAMSO-20-OFF">
+            <span class="form-apply-discount"></span>
+          </div>
+        </div>
+        <div>
+          <button class="form-btn form-btn__submit" id="form-btns" type="submit">Pay</button>
+          <button class="form-btn form-btn__reset" id="form-btnr" class="reset" type="reset">Reset</button>
+        </div>
+      </form>
+      
+    </div>
+    <div class="form-right">
+      <div class="order-info-content">
+        <h2 class="order-info-content__header">You’re paying,</h2>
+        <span class="order-info-content__price">$450.00</span>
+        <div class="order-info-content__details-amount">
+          <div class="form-major-product form-major-product__1">
+            <div class="form-product">
+              <div class="order-info-content__product-name">
+                Custom Gucci Shoes <span>$400.00</span>
+              </div>
+              <div class="order-info-content__product-details">
+                <span>Size: M Color: Red</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-major-product form-major-product__2">
+            <div class="form-product">
+              <div class="product-name-price">
+                <p class="order-info-content__product-name">Nivea Cream 400ml <span class="order-info-content__product-price">$50.00</span></p>
+              </div>
+              <div class="order-info-content__product-details">
+                <span>Size: M Color: Blue</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-discount">
+            <p class="order-info-content__discount-name">Discounts & Offers <span class="order-info-content__discount-price">$0.00</span></p>
+          </div>
+
+          <hr class="order-info-content__hr-line">
+          <div class="form-major-amount">
+            <p class="order-info-content__total-name">Tax <span class="order-info-content__total-price">$0.00</span></p>
+          </div>
+          <div class="form-major-amount">
+            <p class="order-info-content__total-name">Total <span class="order-info-content__total-price">$450.00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
